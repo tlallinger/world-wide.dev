@@ -8,11 +8,9 @@ export default {
     "./app.vue",
     "./error.vue",
   ],
-  darkMode: 'media', // or 'media' or 'class'
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
-    extend: {
-
-    },
+    extend: {},
   },
   plugins: [],
 }

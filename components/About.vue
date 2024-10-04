@@ -1,61 +1,120 @@
 <template>
-  <p class="mt-4 text-lg textContent">
-    I am a software engineer with a passion for building web applications. I
-    have experience working with JavaScript, TypeScript, and Python. I am also
-    familiar with frameworks like React, Vue, and Django.
-  </p>
-  <div class="flex flex-wrap justify-center mt-8">
-    <img
-      v-for="logo in techStackLogos"
-      :key="logo.alt"
-      :src="logo.path"
-      :alt="logo.alt"
-      class="h-12 w-12 m-2"
-    />
+  <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+    <div
+      v-for="(card, index) in cards"
+      :key="index"
+      :class="[card.withBg ? 'bg-card' : '', card.class ?? '']"
+      class="text-content flex items-center justify-center rounded-lg p-6 text-center"
+    >
+      <p v-if="card.content">{{ card.content }}</p>
+
+      <div
+        v-if="card.showTechStack"
+        class="flex flex-wrap items-center justify-center"
+      >
+        <div
+          v-for="logo in techStackLogos"
+          :key="logo.alt"
+          class="group relative"
+        >
+          <img :src="logo.path" :alt="logo.alt" class="m-2 size-12" />
+          <div
+            class="absolute bottom-full mb-2 hidden w-max rounded-md bg-gray-700 px-2 py-1 text-xs text-white group-hover:block"
+          >
+            {{ logo.alt }}
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
+const cards: {
+  content?: string;
+  class?: string;
+  showTechStack?: boolean;
+  withBg: boolean;
+}[] = [
+  {
+    content:
+      "Welcome to worldwidedev, your partner in innovative web and software development. We specialize in crafting cutting-edge solutions that bring your ideas to life.",
+    class: "lg:col-span-2",
+    withBg: true,
+  },
+  {
+    showTechStack: true,
+    class: "lg:row-span-2",
+    withBg: false,
+  },
+  {
+    content:
+      "Why choose worldwidedev? We prioritize collaboration, transparency, and agility. Our process keeps you involved, ensuring the final product exceeds your expectations.",
+    withBg: true,
+  },
+  {
+    content:
+      "From startups to enterprise-level applications, worldwidedev handles projects of any scale. We focus on efficient coding, best practices, and timely delivery.",
+    class: "lg:row-span-2",
+    withBg: true,
+  },
+  {
+    content:
+      "Our mission is to simplify complex requirements into user-friendly solutions. Let us help you build your next web application, mobile app, or custom software.",
+    withBg: true,
+  },
+  {
+    content:
+      "At worldwidedev, we stay ahead of the curve by adopting the latest tools and frameworks, ensuring your project is built with modern technology and remains scalable.",
+    withBg: true,
+  },
+  {
+    content: "true",
+    class: "lg:col-span-3 sm:col-span-2",
+    withBg: true,
+  },
+];
+
 const techStackLogos: { path: string; alt: string }[] = [
   {
     path: "https://vuejs.org/images/logo.png",
-    alt: "Vue.js Logo",
+    alt: "Vue.js",
   },
   {
     path: "/img/nuxtJs.png",
-    alt: "Nuxt.js Logo",
+    alt: "Nuxt.js",
   },
   {
     path: "https://vitejs.dev/logo.svg",
-    alt: "Vite Logo",
+    alt: "Vite",
   },
   {
     path: "https://pinia.vuejs.org/logo.svg",
-    alt: "Pinia Logo",
+    alt: "Pinia",
   },
   {
     path: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
-    alt: "Java Logo",
+    alt: "Java",
   },
   {
     path: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-    alt: "GitHub Logo",
+    alt: "GitHub",
   },
   {
     path: "https://cdn.worldvectorlogo.com/logos/jira-3.svg",
-    alt: "Jira Logo",
+    alt: "Jira",
   },
   {
     path: "https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg",
-    alt: "Bootstrap Logo",
+    alt: "Bootstrap",
   },
   {
     path: "https://cdn.vuetifyjs.com/images/logos/vuetify-logo-light.svg",
-    alt: "Vuetify Logo",
+    alt: "Vuetify",
   },
   {
     path: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg",
-    alt: "Swift Logo",
+    alt: "Swift",
   },
 ];
 </script>
