@@ -7,6 +7,7 @@
       class="text-content flex items-center justify-center rounded-lg p-6 text-center"
     >
       <p v-if="card.content">{{ card.content }}</p>
+      <img v-if="card.showLogo" class="size-40" src="/logo.png" alt="Logo" />
 
       <div
         v-if="card.showTechStack"
@@ -34,6 +35,7 @@ const cards: {
   content?: string;
   class?: string;
   showTechStack?: boolean;
+  showLogo?: boolean;
   withBg: boolean;
 }[] = [
   {
@@ -59,8 +61,7 @@ const cards: {
     withBg: true,
   },
   {
-    content:
-      "Our mission is to simplify complex requirements into user-friendly solutions. Let us help you build your next web application, mobile app, or custom software.",
+    showLogo: true,
     withBg: true,
   },
   {

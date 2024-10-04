@@ -6,7 +6,7 @@
       <div class="flex h-16 items-center justify-between">
         <div class="flex items-center">
           <div class="flex-shrink-0">
-            <span class="font-bold text-white">WWD</span>
+            <img class="size-10" src="/logo.png" alt="Logo" />
           </div>
           <div>
             <div class="ml-10 flex items-baseline space-x-6">

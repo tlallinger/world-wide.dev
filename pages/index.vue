@@ -9,17 +9,19 @@
         index % 2 === 0 ? 'bg-primary' : 'bg-secondary',
       ]"
     >
-      <div class="container px-4">
+      <div class="container px-4 text-center">
         <h2
           v-if="section.title"
           class="text-header mb-6 text-3xl font-extrabold"
         >
           {{ section.title }}
         </h2>
-        <component
-          class="max-h-screen overflow-auto px-2 py-4 sm:py-20 md:px-14"
-          :is="section.content"
-        />
+        <div class="flex justify-center">
+          <component
+            class="max-h-screen overflow-auto px-2 py-4 text-center sm:py-20 md:px-14"
+            :is="section.content"
+          />
+        </div>
       </div>
     </section>
   </div>
