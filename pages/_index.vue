@@ -5,7 +5,7 @@
       :id="section.id"
       :key="index"
       :class="[
-        'flex min-h-screen snap-start flex-col items-center justify-center pt-16',
+        'flex min-h-screen flex-col items-center justify-center pt-16 sm:snap-start md:snap-start',
         index % 2 === 0 ? 'bg-primary' : 'bg-secondary',
       ]"
     >
@@ -18,7 +18,7 @@
         </h2>
         <div class="flex justify-center">
           <component
-            class="max-h-screen overflow-auto px-2 py-4 text-center sm:py-20 md:px-14"
+            class="overflow-auto px-2 py-4 text-center sm:py-20 md:px-14 lg:max-h-screen"
             :is="section.content"
           />
         </div>
