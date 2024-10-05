@@ -14,6 +14,6 @@
 
 <script>
 export default {
-  name: "footer",
+  name: "single-page",
 };
 </script>

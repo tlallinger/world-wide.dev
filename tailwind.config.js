@@ -10,7 +10,22 @@ export default {
   ],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
-    extend: {},
+    container: {
+      center: true,
+      padding: "1rem",
+    },
+    extend: {
+      fontFamily: {
+        primary: ['"JetBrains Mono"', 'monospace'], // Add JetBrains Mono here
+      },
+      colors: {
+        primary: "#1c1c22",
+        accent: {
+          DEFAULT: "#00ff99",
+          hover: "#00e187",
+        },
+      },
+    },
   },
   plugins: [],
 }
