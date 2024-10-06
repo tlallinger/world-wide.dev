@@ -20,9 +20,8 @@
       <Stack size="sm" class="max-w-[500px] justify-center lg:justify-start" />
       <div class="flex items-center justify-center gap-8 lg:justify-start">
         <a
-          isAnchor
           href="mailto:hello@world-wide.dev"
-          class="button flex items-center gap-2 uppercase"
+          class="btn-lg flex items-center gap-2 uppercase"
         >
           Hire Me
         </a>
@@ -67,7 +66,6 @@
 </template>
 
 <script setup lang="ts">
-import Button from "@/components/ui/Button.vue";
 import Photo from "@/components/Photo.vue";
 import Stack from "@/components/Stack.vue";
 
@@ -79,9 +77,3 @@ const socials = [
   { icon: "github", path: "https://github.com/tlallinger" },
 ];
 </script>
-
-<style scoped>
-.button-lg-outlined {
-  @apply h-[56px] border border-accent bg-transparent px-8 text-sm uppercase tracking-[2px] text-accent hover:bg-accent hover:text-primary;
-}
-</style>

@@ -1,3 +1,5 @@
+@import url("./components/btn.css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

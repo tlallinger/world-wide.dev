@@ -30,7 +30,7 @@
       <div class="grow" />
 
       <NuxtLink to="/contact" class="p-2">
-        <Button>Hire me</Button>
+        <button class="btn-md">Hire me</button>
       </NuxtLink>
     </div>
   </nav>
