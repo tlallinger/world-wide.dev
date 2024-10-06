@@ -11,12 +11,12 @@ export default defineEventHandler(async (req) => {
         const runtimeConfig = useRuntimeConfig()
 
         const transporter = nodemailer.createTransport({
-            host: runtimeConfig.smtpHost,
-            port: Number(runtimeConfig.smtpPort) || 587,
+            host: runtimeConfig.private.smtpHost,
+            port: Number(runtimeConfig.private.smtpPort),
             secure: false, // use TLS
             auth: {
-                user: runtimeConfig.smtpUser,
-                pass: runtimeConfig.smtpPass,
+                user: runtimeConfig.private.smtpUser,
+                pass: runtimeConfig.private.smtpPass,
             },
         });
 
