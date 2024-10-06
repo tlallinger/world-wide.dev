@@ -10,11 +10,13 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "nodemailer": "^6.9.15",
     "nuxt": "^3.13.0",
     "vue": "latest"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.12.1",
+    "@types/nodemailer": "^6.4.16",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.47",
     "prettier": "^3.3.3",

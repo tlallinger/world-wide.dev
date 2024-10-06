@@ -17,4 +17,13 @@ export default defineNuxtConfig({
   devtools: {
     enabled: false,
   },
+  runtimeConfig: {
+    recipientEmail: '',
+    private: {
+      smtpHost: '',
+      smtpPort: '',
+      smtpUser: '',
+      smtpPass: '',
+    },
+  },
 })

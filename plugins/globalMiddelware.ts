@@ -4,7 +4,7 @@ export default defineNuxtPlugin(() => {
 
         const isDev = process.env.NODE_ENV === 'development';
 
-        const allowedPaths = ['/'];
+        const allowedPaths = ['/', '/_index'];
 
         if (underConstruction && to.path !== '/underconstruction') {
             return navigateTo('/underconstruction');

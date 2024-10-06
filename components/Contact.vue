@@ -5,7 +5,7 @@
         <label for="email" class="sr-only fixed">Email address</label>
         <input
           id="email"
-          v-model="formData.email"
+          v-model="formData.from"
           name="email"
           type="email"
           autocomplete="email"
@@ -57,13 +57,26 @@ import { ref } from "vue";
 
 // Reactive form data
 const formData = ref({
-  email: "",
-  subject: "",
-  message: "",
+  from: "abc@example.com",
+  subject: "Test",
+  message: "Mama mia!",
 });
+const runtimeConfig = useRuntimeConfig();
 
-// Handle form submission
-function handleSubmit() {
-  console.log(formData.value);
-}
+const handleSubmit = async () => {
+  try {
+    const res = await fetch("/api/email", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData.value),
+    });
+
+    if (!res.ok) {
+      throw new Error("Failed to send email");
+    }
+    alert("Email sent successfully!");
+  } catch (error) {
+    alert(error);
+  }
+};
 </script>
