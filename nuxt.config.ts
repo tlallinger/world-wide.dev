@@ -17,9 +17,4 @@ export default defineNuxtConfig({
   devtools: {
     enabled: false,
   },
-  runtimeConfig: {
-    public: {
-      underConstruction: process.env.UNDER_CONSTRUCTION || 'false',
-    },
-  },
 })

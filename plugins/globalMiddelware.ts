@@ -1,13 +1,17 @@
-export default defineNuxtPlugin(({ $config }) => {
+export default defineNuxtPlugin(() => {
     addRouteMiddleware('restrict', (to) => {
-        const underConstruction = $config.public.underConstruction;
-        if (underConstruction === 'true' && to.path !== '/underconstruction') {
-            return to.path = '/underconstruction';
-        }
+        const underConstruction = false
+
+        const isDev = process.env.NODE_ENV === 'development';
 
         const allowedPaths = ['/'];
-        if (underConstruction !== 'true' && !allowedPaths.includes(to.path)) {
-            return to.path = '/';
+
+        if (underConstruction && to.path !== '/underconstruction') {
+            return navigateTo('/underconstruction');
+        }
+
+        if (!isDev && !underConstruction && !allowedPaths.includes(to.path)) {
+            return navigateTo('/');
         }
     }, { global: true });
 });
