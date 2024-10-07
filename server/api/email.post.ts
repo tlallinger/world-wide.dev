@@ -1,31 +1,40 @@
 import nodemailer from 'nodemailer';
 
+export interface EmailBody {
+    from: string;
+    name: string;
+    phone: string;
+    subject: string;
+    message: string;
+}
+
 export default defineEventHandler(async (req) => {
     if (req.method !== 'POST') {
         throw Error('Method Not Allowed');
     }
 
     try {
-        const { subject, message, from } = await readBody(req);
+        const { subject, message, from, name, phone }: EmailBody = await readBody(req);
 
         const runtimeConfig = useRuntimeConfig()
 
         const transporter = nodemailer.createTransport({
             host: runtimeConfig.private.smtpHost,
             port: Number(runtimeConfig.private.smtpPort),
-            secure: false, // use TLS
+            secure: false,
             auth: {
                 user: runtimeConfig.private.smtpUser,
                 pass: runtimeConfig.private.smtpPass,
             },
         });
 
+        const text = `Name: ${name}\nPhone: ${phone}\n\n${message}`;
 
         const mailOptions = {
-            from: from,
             to: runtimeConfig.recipientEmail,
-            subject: subject,
-            text: message,
+            from,
+            subject,
+            text,
         };
 
         await transporter.sendMail(mailOptions);

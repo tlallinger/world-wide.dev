@@ -1,22 +1,23 @@
 <template>
-  <div class="relative h-full w-full">
-    <!-- Image container -->
+  <div class="relative">
     <div
-      class="absolute flex h-[298px] w-[298px] items-center justify-center mix-blend-lighten xl:h-[498px] xl:w-[498px]"
+      :class="[
+        'absolute flex items-center justify-center mix-blend-lighten',
+        sizeClasses,
+      ]"
     >
       <NuxtImg
         src="/assets/photo.png"
         alt="Photo"
-        class="h-60 object-contain xl:h-96"
+        class="h-60 object-contain lg:h-80 xl:h-96"
       />
       <div
-        class="absolute bottom-0 right-0 size-40 rounded-full bg-gradient-to-t from-black to-transparent xl:right-20"
+        class="absolute bottom-0 right-0 size-40 rounded-full bg-gradient-to-t from-black to-transparent lg:right-20"
       ></div>
     </div>
 
-    <!-- Circle SVG -->
     <svg
-      class="h-[300px] w-[300px] xl:h-[506px] xl:w-[506px]"
+      :class="sizeClasses"
       fill="transparent"
       viewBox="0 0 506 506"
       xmlns="http://www.w3.org/2000/svg"
@@ -35,5 +36,6 @@
 </template>
 
 <script setup lang="ts">
-// No additional imports or setup needed
+const sizeClasses =
+  "size-72 md:size-80 lg:size-[400px] xl:size-[500px] 2xl:size-[600px]";
 </script>
