@@ -61,7 +61,6 @@ const formData = ref({
   subject: "Test",
   message: "Mama mia!",
 });
-const runtimeConfig = useRuntimeConfig();
 
 const handleSubmit = async () => {
   try {

@@ -4,7 +4,7 @@
     <div
       class="absolute flex h-[298px] w-[298px] items-center justify-center mix-blend-lighten xl:h-[498px] xl:w-[498px]"
     >
-      <img
+      <NuxtImg
         src="/assets/photo.png"
         alt="Photo"
         class="h-60 object-contain xl:h-96"

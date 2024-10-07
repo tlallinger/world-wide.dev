@@ -6,8 +6,8 @@ export default defineNuxtConfig({
     }
   },
   compatibilityDate: '2024-04-03',
-  css: ['~/styles/css/main.css'],
-  modules: ['@nuxtjs/tailwindcss'],
+  css: ['~/assets/css/main.css'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxt/image'],
   postcss: {
     plugins: {
       tailwindcss: {},

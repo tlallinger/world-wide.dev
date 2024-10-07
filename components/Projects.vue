@@ -6,7 +6,7 @@
       class="w-50 flex flex-shrink-0 snap-center flex-col overflow-hidden rounded-lg shadow-lg"
     >
       <div class="flex-shrink-0">
-        <img
+        <NuxtImg
           :src="project.image"
           :alt="project.title"
           class="h-48 w-full object-cover"

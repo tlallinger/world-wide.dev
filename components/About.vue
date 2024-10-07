@@ -7,7 +7,12 @@
       class="text-content flex items-center justify-center rounded-lg p-6 text-center"
     >
       <p v-if="card.content">{{ card.content }}</p>
-      <img v-if="card.showLogo" class="size-40" src="/logo.png" alt="Logo" />
+      <NuxtImg
+        v-if="card.showLogo"
+        class="size-40"
+        src="/logo.png"
+        alt="Logo"
+      />
 
       <div
         v-if="card.showTechStack"
@@ -18,7 +23,7 @@
           :key="logo.alt"
           class="group relative"
         >
-          <img :src="logo.path" :alt="logo.alt" class="m-2 size-12" />
+          <NuxtImg :src="logo.path" :alt="logo.alt" class="m-2 size-12" />
           <div
             class="absolute bottom-full mb-2 hidden w-max rounded-md bg-gray-700 px-2 py-1 text-xs text-white group-hover:block"
           >

@@ -18,8 +18,8 @@
         </h2>
         <div class="flex justify-center">
           <component
-            class="overflow-auto px-2 py-4 text-center sm:py-20 md:px-14 lg:max-h-screen"
             :is="section.content"
+            class="overflow-auto px-2 py-4 text-center sm:py-20 md:px-14 lg:max-h-screen"
           />
         </div>
       </div>

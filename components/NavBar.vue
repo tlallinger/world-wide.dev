@@ -4,7 +4,7 @@
   >
     <div class="container flex h-16 items-center">
       <NuxtLink to="/">
-        <img class="size-10" src="/logo.png" alt="Logo" />
+        <NuxtImg class="size-10" src="/logo.png" alt="Logo" />
       </NuxtLink>
       <div class="ml-10 flex items-center space-x-6">
         <NuxtLink
@@ -37,15 +37,6 @@
 </template>
 
 <script setup lang="ts">
-import Button from "./ui/Button.vue";
-
-const scrollToSection = (sectionId: string) => {
-  const section = document.getElementById(sectionId);
-  if (section) {
-    section.scrollIntoView({ behavior: "smooth" });
-  }
-};
-
 const scrollButtons: { text: string; sectionId: string; svg: string }[] = [
   {
     text: "About Me",
@@ -57,10 +48,5 @@ const scrollButtons: { text: string; sectionId: string; svg: string }[] = [
     sectionId: "projects",
     svg: "M6.28 5.22a.75.75 0 0 1 0 1.06L2.56 10l3.72 3.72a.75.75 0 0 1-1.06 1.06L.97 10.53a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0Zm7.44 0a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L17.44 10l-3.72-3.72a.75.75 0 0 1 0-1.06ZM11.377 2.011a.75.75 0 0 1 .612.867l-2.5 14.5a.75.75 0 0 1-1.478-.255l2.5-14.5a.75.75 0 0 1 .866-.612Z",
   },
-  // {
-  //   text: "Contact Me",
-  //   sectionId: "contact",
-  //   svg: "M5.404 14.596A6.5 6.5 0 1 1 16.5 10a1.25 1.25 0 0 1-2.5 0 4 4 0 1 0-.571 2.06A2.75 2.75 0 0 0 18 10a8 8 0 1 0-2.343 5.657.75.75 0 0 0-1.06-1.06 6.5 6.5 0 0 1-9.193 0ZM10 7.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z",
-  // },
 ];
 </script>
