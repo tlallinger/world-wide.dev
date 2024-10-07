@@ -39,46 +39,54 @@ const classes = computed<string>(() => {
 const techStackLogos: { path: string; alt: string }[] = [
   // FE
   {
-    path: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+    path: "/img/techLogos/typescript.svg",
     alt: "TypeScript",
   },
   {
-    path: "https://vuejs.org/images/logo.png",
+    path: "/img/techLogos/Javascript.svg",
+    alt: "Javascript",
+  },
+  {
+    path: "/img/techLogos/vuejs.svg",
     alt: "Vue.js",
   },
   {
-    path: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-    alt: "react",
-  },
-  {
-    path: "/img/nuxtJs.png",
+    path: "/img/techLogos/nuxtjs.svg",
     alt: "Nuxt.js",
   },
   {
-    path: "https://vitejs.dev/logo.svg",
+    path: "/img/techLogos/vitejs.svg",
     alt: "ViteJs",
   },
   {
-    path: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
+    path: "/img/techLogos/vitest.svg",
+    alt: "vitest",
+  },
+  {
+    path: "/img/techLogos/tailwindcss.svg",
     alt: "tailwindcss",
   },
   {
-    path: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
-    alt: "Sass",
+    path: "/img/techLogos/bootstrap.svg",
+    alt: "Bootstrap",
   },
   {
-    path: "https://cdn.vuetifyjs.com/images/logos/vuetify-logo-light.svg",
-    alt: "Vuetify",
+    path: "/img/techLogos/css3.svg",
+    alt: "CSS",
   },
 
   // BE
   {
-    path: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+    path: "/img/techLogos/java.svg",
     alt: "Java",
   },
   {
-    path: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+    path: "/img/techLogos/mySQL.svg",
     alt: "MySQL",
+  },
+  {
+    path: "/img/techLogos/git.svg",
+    alt: "git",
   },
 ];
 </script>
