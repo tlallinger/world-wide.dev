@@ -1,7 +1,7 @@
 <template>
   <form
     class="flex w-full flex-col justify-center gap-8 rounded-xl lg:w-2/3"
-    @submit.prevent="handleSubmit"
+    netlify
   >
     <h3 class="mb-4 text-4xl text-accent">Let's work together</h3>
 
@@ -38,7 +38,7 @@
       </svg>
       <div v-else>Send</div>
     </button>
-    <Toast v-model="toastProps" />
+    <!-- <Toast v-model="toastProps" /> -->
   </form>
 </template>
 
