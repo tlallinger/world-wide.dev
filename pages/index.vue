@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="snap-container h-screen w-full snap-y snap-mandatory overflow-auto"
-  >
+  <div class="snap-container h-screen w-full snap-y snap-mandatory">
     <section
       v-for="(section, index) in sections"
       :id="section.id"
@@ -15,7 +13,7 @@
         <div class="flex justify-center">
           <component
             :is="section.component"
-            class="overflow-auto px-2 py-4 text-center sm:py-20 md:px-14 lg:max-h-screen"
+            class="px-2 py-4 text-center sm:py-20 md:px-14 lg:max-h-screen"
           />
         </div>
       </div>
