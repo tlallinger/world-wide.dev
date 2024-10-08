@@ -1,9 +1,19 @@
 <template>
   <form
+    name="contact-form"
     class="flex w-full flex-col justify-center gap-8 rounded-xl lg:w-2/3"
     netlify
+    data-netlify="true"
+    data-netlify-honeypot="bot-field"
+    @submit.prevent="handleSubmit"
   >
     <h3 class="mb-4 text-4xl text-accent">Let's work together</h3>
+
+    <div class="hidden">
+      <label>
+        Don’t fill this out if you’re human: <input name="bot-field" />
+      </label>
+    </div>
 
     <div class="grid grid-cols-1 gap-7 md:grid-cols-2">
       <UiInputField v-model="formData.name" label="Name" required />
@@ -38,7 +48,7 @@
       </svg>
       <div v-else>Send</div>
     </button>
-    <!-- <Toast v-model="toastProps" /> -->
+    <Toast v-model="toastProps" />
   </form>
 </template>
 
