@@ -1,5 +1,7 @@
 <template>
-  <div class="snap-container h-screen w-full snap-y snap-mandatory">
+  <div
+    class="snap-container h-screen w-full snap-y snap-mandatory lg:overflow-auto"
+  >
     <section
       v-for="(section, index) in sections"
       :id="section.id"
