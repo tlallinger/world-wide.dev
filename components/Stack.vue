@@ -39,53 +39,53 @@ const classes = computed<string>(() => {
 const techStackLogos: { path: string; alt: string }[] = [
   // FE
   {
-    path: "/img/techLogos/typescript.svg",
+    path: "/techLogos/typescript.svg",
     alt: "TypeScript",
   },
   {
-    path: "/img/techLogos/Javascript.svg",
+    path: "/techLogos/Javascript.svg",
     alt: "Javascript",
   },
   {
-    path: "/img/techLogos/vuejs.svg",
+    path: "/techLogos/vuejs.svg",
     alt: "Vue.js",
   },
   {
-    path: "/img/techLogos/nuxtjs.svg",
+    path: "/techLogos/nuxtjs.svg",
     alt: "Nuxt.js",
   },
   {
-    path: "/img/techLogos/vitejs.svg",
+    path: "/techLogos/vitejs.svg",
     alt: "ViteJs",
   },
   {
-    path: "/img/techLogos/vitest.svg",
+    path: "/techLogos/vitest.svg",
     alt: "vitest",
   },
   {
-    path: "/img/techLogos/tailwindcss.svg",
+    path: "/techLogos/tailwindcss.svg",
     alt: "tailwindcss",
   },
   {
-    path: "/img/techLogos/bootstrap.svg",
+    path: "/techLogos/bootstrap.svg",
     alt: "Bootstrap",
   },
   {
-    path: "/img/techLogos/css3.svg",
+    path: "/techLogos/css3.svg",
     alt: "CSS",
   },
 
   // BE
   {
-    path: "/img/techLogos/java.svg",
+    path: "/techLogos/java.svg",
     alt: "Java",
   },
   {
-    path: "/img/techLogos/mySQL.svg",
+    path: "/techLogos/mySQL.svg",
     alt: "MySQL",
   },
   {
-    path: "/img/techLogos/git.svg",
+    path: "/techLogos/git.svg",
     alt: "git",
   },
 ];

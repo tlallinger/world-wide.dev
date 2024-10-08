@@ -5,6 +5,9 @@ export default defineNuxtConfig({
       title: 'worldwidedev',
     }
   },
+  image: {
+    dir: 'assets/img',
+  },
   compatibilityDate: '2024-04-03',
   css: ['~/assets/css/main.css'],
   modules: ['@nuxtjs/tailwindcss', '@nuxt/image'],
