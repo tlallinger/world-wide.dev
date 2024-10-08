@@ -3,7 +3,7 @@
     name="contact-form"
     method="POST"
     class="flex w-full flex-col justify-center gap-8 rounded-xl lg:w-2/3"
-    data-netlify="true"
+    netlify
   >
     <h3 class="mb-4 text-4xl text-accent">Let's work together</h3>
 
@@ -18,6 +18,7 @@
 
     <textarea
       v-model="formData.message"
+      name="message"
       class="flex h-52 w-full rounded-md border border-white/10 bg-primary px-4 py-5 text-base placeholder:text-white/60 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent"
       placeholder="Type your message here."
     />
