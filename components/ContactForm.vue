@@ -2,19 +2,12 @@
   <form
     name="contact-form"
     method="POST"
-    id="contact-form"
     class="flex w-full flex-col justify-center gap-8 rounded-xl lg:w-2/3"
-    netlify
     data-netlify="true"
-    data-netlify-honeypot="bot-field"
   >
     <h3 class="mb-4 text-4xl text-accent">Let's work together</h3>
 
-    <div class="hidden">
-      <label>
-        Don’t fill this out if you’re human: <input name="bot-field" />
-      </label>
-    </div>
+    <input type="hidden" name="form-name" value="contact-form" />
 
     <div class="grid grid-cols-1 gap-7 md:grid-cols-2">
       <UiInputField v-model="formData.name" label="Name" required />
@@ -49,7 +42,6 @@
       </svg>
       <div v-else>Send</div>
     </button>
-    <Toast v-model="toastProps" />
   </form>
 </template>
 
@@ -72,31 +64,31 @@ const toastProps = ref<ToastProps>({
   variant: "success",
 });
 
-const handleSubmit = async () => {
-  try {
-    isLoading.value = true;
-    const res = await fetch("/api/email", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    });
-    if (!res.ok) {
-      throw new Error();
-    }
+// const handleSubmit = async () => {
+//   try {
+//     isLoading.value = true;
+//     const res = await fetch("/api/email", {
+//       method: "POST",
+//       headers: { "Content-Type": "application/json" },
+//       body: JSON.stringify(formData),
+//     });
+//     if (!res.ok) {
+//       throw new Error();
+//     }
 
-    Object.keys(formData).forEach(
-      (key) => (formData[key as keyof EmailBody] = ""),
-    );
+//     Object.keys(formData).forEach(
+//       (key) => (formData[key as keyof EmailBody] = ""),
+//     );
 
-    toastProps.value.message = "Email sent successfully";
-    toastProps.value.variant = "success";
-    scrollToSection("about");
-  } catch (error) {
-    toastProps.value.message = "Failed to send email";
-    toastProps.value.variant = "error";
-  } finally {
-    toastProps.value.show = true;
-    isLoading.value = false;
-  }
-};
+//     toastProps.value.message = "Email sent successfully";
+//     toastProps.value.variant = "success";
+//     scrollToSection("about");
+//   } catch (error) {
+//     toastProps.value.message = "Failed to send email";
+//     toastProps.value.variant = "error";
+//   } finally {
+//     toastProps.value.show = true;
+//     isLoading.value = false;
+//   }
+// };
 </script>

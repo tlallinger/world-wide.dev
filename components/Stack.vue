@@ -1,7 +1,7 @@
 <template>
-  <div v-bind="$attrs" class="flex flex-wrap items-center">
+  <div class="flex flex-wrap items-center">
     <div v-for="logo in techStackLogos" :key="logo.alt" class="group relative">
-      <NuxtImg :src="logo.path" :alt="logo.alt" :class="['m-2', classes]" />
+      <img :src="logo.path" :alt="logo.alt" :class="['m-2', classes]" />
       <div
         class="absolute bottom-full mb-2 hidden w-max rounded-md bg-gray-700 px-2 py-1 text-xs text-white group-hover:block"
       >
@@ -23,6 +23,12 @@ const props = withDefaults(
   },
 );
 
+const modules = import.meta.glob("~/assets/img/techLogos/*.svg", {
+  eager: true,
+});
+
+const getImageUrl = (path: string) => modules[path]?.default as string;
+
 const classes = computed<string>(() => {
   const sizeClass: {
     [key in Size]: string;
@@ -39,53 +45,53 @@ const classes = computed<string>(() => {
 const techStackLogos: { path: string; alt: string }[] = [
   // FE
   {
-    path: "/techLogos/typescript.svg",
+    path: getImageUrl("/assets/img/techLogos/typescript.svg"),
     alt: "TypeScript",
   },
   {
-    path: "/techLogos/Javascript.svg",
+    path: getImageUrl("/assets/img/techLogos/javascript.svg"),
     alt: "Javascript",
   },
   {
-    path: "/techLogos/vuejs.svg",
+    path: getImageUrl("/assets/img/techLogos/vuejs.svg"),
     alt: "Vue.js",
   },
   {
-    path: "/techLogos/nuxtjs.svg",
+    path: getImageUrl("/assets/img/techLogos/nuxtjs.svg"),
     alt: "Nuxt.js",
   },
   {
-    path: "/techLogos/vitejs.svg",
+    path: getImageUrl("/assets/img/techLogos/vitejs.svg"),
     alt: "ViteJs",
   },
   {
-    path: "/techLogos/vitest.svg",
+    path: getImageUrl("/assets/img/techLogos/vitest.svg"),
     alt: "vitest",
   },
   {
-    path: "/techLogos/tailwindcss.svg",
+    path: getImageUrl("/assets/img/techLogos/tailwindcss.svg"),
     alt: "tailwindcss",
   },
   {
-    path: "/techLogos/bootstrap.svg",
+    path: getImageUrl("/assets/img/techLogos/bootstrap.svg"),
     alt: "Bootstrap",
   },
   {
-    path: "/techLogos/css3.svg",
+    path: getImageUrl("/assets/img/techLogos/css3.svg"),
     alt: "CSS",
   },
 
   // BE
   {
-    path: "/techLogos/java.svg",
+    path: getImageUrl("/assets/img/techLogos/java.svg"),
     alt: "Java",
   },
   {
-    path: "/techLogos/mySQL.svg",
+    path: getImageUrl("/assets/img/techLogos/mySQL.svg"),
     alt: "MySQL",
   },
   {
-    path: "/techLogos/git.svg",
+    path: getImageUrl("/assets/img/techLogos/git.svg"),
     alt: "git",
   },
 ];

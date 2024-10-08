@@ -2,12 +2,13 @@
   <div class="relative">
     <input
       :value="modelValue"
-      @input="handleInput"
       type="text"
+      :name="label"
       class="w-full"
       :required="required"
       placeholder=""
       v-bind="$attrs"
+      @input="handleInput"
     />
     <label :class="{ required }">{{ label }}</label>
   </div>
