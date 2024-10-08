@@ -6,8 +6,8 @@
         sizeClasses,
       ]"
     >
-      <NuxtImg
-        src="/photo.png"
+      <img
+        src="~/assets/img/photo.png"
         alt="Photo"
         class="h-60 object-contain lg:h-80 xl:h-96"
       />
