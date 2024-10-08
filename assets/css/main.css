@@ -41,3 +41,9 @@
     @apply text-gray-300 hover:bg-gray-700 hover:text-white hover:underline;
   }
 }
+
+@layer utilities {
+  .hoverEffect {
+    @apply hover:scale-105 hover:shadow-xl hover:shadow-slate-950;
+  }
+}

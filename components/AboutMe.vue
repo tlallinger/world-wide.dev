@@ -29,7 +29,7 @@
             v-for="(item, index) in socials"
             :key="index"
             :to="item.path"
-            class="flex size-12 items-center justify-center rounded-full border border-accent text-base text-accent duration-500 hover:bg-accent hover:text-primary hover:transition-all"
+            class="hoverEffect flex size-12 items-center justify-center rounded-full border border-accent text-base text-accent duration-500 hover:bg-accent hover:text-primary hover:transition-all"
           >
             <svg
               aria-hidden="true"
