@@ -23,12 +23,6 @@ const props = withDefaults(
   },
 );
 
-const modules = import.meta.glob("~/assets/img/techLogos/*.svg", {
-  eager: true,
-});
-
-const getImageUrl = (path: string) => modules[path]?.default as string;
-
 const classes = computed<string>(() => {
   const sizeClass: {
     [key in Size]: string;
@@ -45,53 +39,53 @@ const classes = computed<string>(() => {
 const techStackLogos: { path: string; alt: string }[] = [
   // FE
   {
-    path: getImageUrl("/assets/img/techLogos/typescript.svg"),
+    path: "/techLogos/typescript.svg",
     alt: "TypeScript",
   },
   {
-    path: getImageUrl("/assets/img/techLogos/javascript.svg"),
+    path: "/techLogos/javascript.svg",
     alt: "Javascript",
   },
   {
-    path: getImageUrl("/assets/img/techLogos/vuejs.svg"),
+    path: "/techLogos/vuejs.svg",
     alt: "Vue.js",
   },
   {
-    path: getImageUrl("/assets/img/techLogos/nuxtjs.svg"),
+    path: "/techLogos/nuxtjs.svg",
     alt: "Nuxt.js",
   },
   {
-    path: getImageUrl("/assets/img/techLogos/vitejs.svg"),
+    path: "/techLogos/vitejs.svg",
     alt: "ViteJs",
   },
   {
-    path: getImageUrl("/assets/img/techLogos/vitest.svg"),
+    path: "/techLogos/vitest.svg",
     alt: "vitest",
   },
   {
-    path: getImageUrl("/assets/img/techLogos/tailwindcss.svg"),
+    path: "/techLogos/tailwindcss.svg",
     alt: "tailwindcss",
   },
   {
-    path: getImageUrl("/assets/img/techLogos/bootstrap.svg"),
+    path: "/techLogos/bootstrap.svg",
     alt: "Bootstrap",
   },
   {
-    path: getImageUrl("/assets/img/techLogos/css3.svg"),
+    path: "/techLogos/css3.svg",
     alt: "CSS",
   },
 
   // BE
   {
-    path: getImageUrl("/assets/img/techLogos/java.svg"),
+    path: "/techLogos/java.svg",
     alt: "Java",
   },
   {
-    path: getImageUrl("/assets/img/techLogos/mySQL.svg"),
+    path: "/techLogos/mySQL.svg",
     alt: "MySQL",
   },
   {
-    path: getImageUrl("/assets/img/techLogos/git.svg"),
+    path: "/techLogos/git.svg",
     alt: "git",
   },
 ];
