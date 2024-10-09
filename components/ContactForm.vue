@@ -1,6 +1,6 @@
 <template>
   <form
-    class="flex w-full flex-col justify-center gap-8 rounded-xl lg:w-2/3"
+    class="flex w-full flex-col justify-center gap-8 rounded-xl text-content lg:w-2/3"
     @submit.prevent="handleSubmit"
   >
     <h3 class="mb-4 text-4xl text-accent">Let's work together</h3>
