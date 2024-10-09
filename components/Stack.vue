@@ -4,7 +4,7 @@
       <img
         :src="logo.path"
         :alt="logo.alt"
-        :class="['hoverEffect m-2', classes]"
+        :class="['m-2 hover:scale-125', classes]"
       />
       <div
         class="absolute bottom-full mb-2 hidden w-max rounded-md bg-gray-700 px-2 py-1 text-xs text-white group-hover:block"
