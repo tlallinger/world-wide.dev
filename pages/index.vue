@@ -7,7 +7,7 @@
       :id="section.id"
       :key="index"
       :class="[
-        'flex min-h-screen flex-col items-center justify-center md:snap-start',
+        'my-6 flex min-h-screen flex-col items-center justify-center md:snap-start lg:my-2',
         index % 2 === 0 ? 'bg-primary' : 'bg-secondary',
       ]"
     >

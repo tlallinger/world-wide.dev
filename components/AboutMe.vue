@@ -4,14 +4,14 @@
   >
     <Photo class="mb-4 mr-0 lg:mb-0 lg:mr-8" />
     <div class="space-y-5 text-center lg:text-left">
-      <div>
+      <div class="text-gray-500">
         <span class="text-xl">Software Developer</span>
         <h1 class="h1">
           Hello I'm <br />
           <span class="text-accent">Thomas.</span>
         </h1>
       </div>
-      <p class="text-white/80">
+      <p class="text-gray-800">
         I'm a passionate software developer from Germany, specialized in
         frontend development. My expertise lies in modern web technologies,
         ensuring clean, efficient, and scalable code for seamless user

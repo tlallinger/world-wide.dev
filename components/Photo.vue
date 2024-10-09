@@ -1,19 +1,11 @@
 <template>
   <div class="relative">
-    <div
-      :class="[
-        'absolute flex items-center justify-center mix-blend-lighten',
-        sizeClasses,
-      ]"
-    >
+    <div :class="['absolute flex items-center justify-center', sizeClasses]">
       <img
         src="~/assets/img/photo.png"
         alt="Photo"
-        class="h-60 object-contain lg:h-80 xl:h-96"
+        class="h-60 rounded-full object-contain mix-blend-hard-light dark:mix-blend-lighten lg:h-80 xl:h-[26rem]"
       />
-      <div
-        class="absolute bottom-0 right-0 size-40 rounded-full bg-gradient-to-t from-black to-transparent lg:right-20"
-      ></div>
     </div>
 
     <svg
@@ -21,12 +13,13 @@
       fill="transparent"
       viewBox="0 0 506 506"
       xmlns="http://www.w3.org/2000/svg"
+      class="text-accent"
     >
       <circle
         cx="253"
         cy="253"
         r="250"
-        stroke="#00ff99"
+        stroke="currentColor"
         stroke-width="4"
         stroke-linecap="round"
         stroke-linejoin="round"

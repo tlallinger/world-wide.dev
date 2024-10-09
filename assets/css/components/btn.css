@@ -6,7 +6,7 @@
 
   /* Variants */
   .btn-variant-default {
-    @apply bg-accent text-primary hover:bg-accent-hover;
+    @apply bg-accent text-primary hover:bg-accent;
   }
 
   .btn-variant-primary {
