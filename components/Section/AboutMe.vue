@@ -2,7 +2,7 @@
   <div
     class="flex w-full flex-col items-center justify-between py-4 lg:flex-row"
   >
-    <Photo class="mb-4 mr-0 lg:mb-0 lg:mr-8" />
+    <Photo class="mb-4 mr-0 bg-primary lg:mb-0 lg:mr-8" />
     <div class="space-y-5 text-center lg:text-left">
       <div class="text-gray-500">
         <span class="text-xl">Software Developer</span>

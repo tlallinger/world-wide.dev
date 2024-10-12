@@ -8,14 +8,14 @@
       :key="index"
       :class="[
         'my-6 flex min-h-screen flex-col items-center justify-center md:snap-start lg:my-2',
-        index % 2 === 0 ? 'bg-primary' : 'bg-secondary',
+        index % 2 === 0 ? 'before:bg-primary' : '-z-1 bg-secondary',
       ]"
     >
       <div class="container px-4 text-center">
         <div class="flex justify-center">
           <component
             :is="section.component"
-            class="px-2 py-4 text-center sm:py-20 md:px-14 lg:max-h-screen"
+            class="z-10 px-2 py-4 text-center sm:py-20 md:px-14 lg:max-h-screen"
           />
         </div>
       </div>
@@ -24,17 +24,17 @@
 </template>
 
 <script setup lang="ts">
-import AboutMe from "~/components/AboutMe.vue";
-import ContactForm from "~/components/ContactForm.vue";
+import SectionAboutMe from "~/components/Section/AboutMe.vue";
+import SectionContactForm from "~/components/Section/ContactForm.vue";
 
-const sections = shallowRef([
+const sections = [
   {
     id: "about",
-    component: AboutMe,
+    component: SectionAboutMe,
   },
   {
     id: "contact",
-    component: ContactForm,
+    component: SectionContactForm,
   },
-]);
+];
 </script>
