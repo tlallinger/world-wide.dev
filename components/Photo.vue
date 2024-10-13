@@ -1,8 +1,8 @@
 <template>
   <div class="relative">
     <div :class="['absolute flex items-center justify-center', sizeClasses]">
-      <NuxtImg
-        src="/photo.png"
+      <img
+        src="~/assets/img/photo.png"
         alt="Photo"
         class="h-60 rounded-full object-contain mix-blend-hard-light dark:mix-blend-lighten lg:h-80 xl:h-[26rem]"
         preload
